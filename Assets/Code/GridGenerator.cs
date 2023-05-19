@@ -7,15 +7,9 @@ public class GridGenerator : MonoBehaviour
     public int gridHeight = 10;
     public float tileSpacing = 1.0f;
 
-    private void Update()
+    private void Start()
     {
         GenerateGrid();
-        GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
-        
-        for (int i = 0; i < tiles.Length; i++)
-        {
-            Destroy(tiles[i] , 1.0f);
-        }
     }
 
     private void GenerateGrid()
@@ -32,7 +26,7 @@ public class GridGenerator : MonoBehaviour
                 float posY = (x * tileSpacing - y * tileSpacing) / 4f;
                 
                 //loop through each tile in the grid and center it to the screen
-                tile.transform.position = new Vector2(posX - Mathf.RoundToInt((gridWidth - 1) * tileSpacing * 0.5f), posY);
+                tile.transform.position = new Vector2(posX - Mathf.RoundToInt((gridWidth) * tileSpacing * 0.5f), posY);
                 tile.name = x + " , " + y;
             }
         }
