@@ -3,11 +3,11 @@ using UnityEngine;
 public class GridGenerator : MonoBehaviour
 {
     public GameObject tilePrefab;
-    public int gridWidth = 10;
-    public int gridHeight = 10;
-    public float tileSpacing = 1.0f;
+    private int gridWidth = 8;
+    private int gridHeight = 8;
+    private float tileSpacing = 1.0f;
 
-    private void Start()
+    private void Awake()
     {
         GenerateGrid();
     }
