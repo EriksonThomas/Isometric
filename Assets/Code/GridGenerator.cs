@@ -3,8 +3,8 @@ using UnityEngine;
 public class GridGenerator : MonoBehaviour
 {
     public GameObject tilePrefab;
-    private int gridWidth = 8;
-    private int gridHeight = 8;
+    private int gridWidth = 9;
+    private int gridHeight = 9;
     private float tileSpacing = 1.0f;
 
     private void Awake()
@@ -22,8 +22,8 @@ public class GridGenerator : MonoBehaviour
                 GameObject tile = Instantiate(tilePrefab);
 
                 //set the tile to across by 1/2 and down by 1/4
-                float posX = (x * tileSpacing + y * tileSpacing) / 2f;
-                float posY = (x * tileSpacing - y * tileSpacing) / 4f;
+                float posX = (x * tileSpacing + y * tileSpacing) * 0.5f;
+                float posY = (x * tileSpacing - y * tileSpacing) * 0.4f;
                 
                 //loop through each tile in the grid and center it to the screen
                 tile.transform.position = new Vector2(posX - Mathf.RoundToInt((gridWidth) * tileSpacing * 0.5f), posY);

@@ -27,7 +27,7 @@ public class HighlightTile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        playerMovement = GameObject.Find("Player(Clone)");
+        playerMovement = GameObject.Find("Ship(Clone)");
         Vector2 parentPosition = transform.GetChild(0).transform.position;
         playerMovement.GetComponent<PlayerMovement>().MovePlayer(parentPosition);
     }

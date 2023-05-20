@@ -301,10 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3224ce085c5fac4f82991f1935957c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 4769699043934555791, guid: 1f41eb49fbdcf2b41b9fcb3f30ee1c42, type: 3}
-  gridWidth: 10
-  gridHeight: 10
-  tileSpacing: 1
+  tilePrefab: {fileID: 4769699043934555791, guid: fcb28a1e975e52a40acbcfea8fdc6ba0, type: 3}
 --- !u!4 &875905457
 Transform:
   m_ObjectHideFlags: 0

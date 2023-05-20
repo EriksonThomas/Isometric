@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5446525365764146509}
   - component: {fileID: 7335309553000314243}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: Square Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef5e780120959d241b596aaf02a84159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00e95ee7687582b4989796a1f6aeb7bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243e998dfc13e0a41b6eef50f102ecb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileOriginal: {fileID: 21300000, guid: ef5e780120959d241b596aaf02a84159, type: 3}
-  tileHighlight: {fileID: 21300000, guid: 8e430b6adafeacb448fa30e6f1ac1ec1, type: 3}
+  tileOriginal: {fileID: 21300000, guid: 00e95ee7687582b4989796a1f6aeb7bb, type: 3}
+  tileHighlight: {fileID: 21300000, guid: 73a7033e014e9e64f9103eaede2bb8d5, type: 3}
 --- !u!60 &7335309553000314243
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0.5}
-    oldSize: {x: 0.36, y: 0.36}
+    oldSize: {x: 1.125, y: 1.125}
     newSize: {x: 0.36, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,14 +126,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4624684, y: 0.22185174}
-      - {x: 0.025528893, y: 0.006473506}
-      - {x: 0.025409192, y: -0.005140705}
-      - {x: 0.46757126, y: -0.22258765}
-      - {x: 0.5354956, y: -0.22261506}
-      - {x: 0.99200964, y: -0.0067356136}
-      - {x: 0.9921267, y: 0.0076546166}
-      - {x: 0.53792346, y: 0.22179864}
+    - - {x: 0.5426215, y: 0.35427865}
+      - {x: 0.07664101, y: 0.016928261}
+      - {x: 0.07652131, y: -0.009787263}
+      - {x: 0.5465627, y: -0.3596611}
+      - {x: 0.58399487, y: -0.3610014}
+      - {x: 1.0470805, y: -0.017953765}
+      - {x: 1.0454687, y: 0.02105424}
+      - {x: 0.5762575, y: 0.35654885}
 --- !u!1 &7587118988892831596
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7587118988892831596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.564, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
