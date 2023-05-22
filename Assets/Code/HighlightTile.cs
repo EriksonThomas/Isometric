@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HighlightTile : MonoBehaviour
@@ -24,11 +25,11 @@ public class HighlightTile : MonoBehaviour
     {
         spriteRenderer.sprite = tileOriginal;
     }
-
     private void OnMouseDown()
     {
         playerMovement = GameObject.Find("Ship(Clone)");
         Vector2 parentPosition = transform.GetChild(0).transform.position;
-        playerMovement.GetComponent<PlayerMovement>().MovePlayer(parentPosition);
+        var tilePosition = gameObject.GetComponentInParent<TileProperties>().tilePosition;
+        playerMovement.GetComponent<PlayerMovement>().MovePlayer(parentPosition, tilePosition);
     }
 }

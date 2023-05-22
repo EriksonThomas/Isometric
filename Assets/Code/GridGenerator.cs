@@ -28,6 +28,8 @@ public class GridGenerator : MonoBehaviour
                 //loop through each tile in the grid and center it to the screen
                 tile.transform.position = new Vector2(posX - Mathf.RoundToInt((gridWidth) * tileSpacing * 0.5f), posY);
                 tile.name = x + " , " + y;
+                tile.GetComponent<TileProperties>().tilePosition.Item1 = x;
+                tile.GetComponent<TileProperties>().tilePosition.Item2 = y;
             }
         }
     }
