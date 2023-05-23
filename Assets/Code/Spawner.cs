@@ -14,12 +14,12 @@ public class Spawner : MonoBehaviour
     
     void SpawnPlayer()
     {
-        GameObject foundObject = GameObject.Find("0 , 0");
+        GameObject tile = GameObject.Find("0 , 0");
 
-        if (foundObject != null)
+        if (tile != null)
         {
             character = Instantiate(characterPrefab);
-            character.transform.position = foundObject.transform.GetChild(0).transform.position;
+            character.transform.position = tile.transform.GetChild(0).transform.position;
         }
         else
         {

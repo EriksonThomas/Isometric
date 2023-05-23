@@ -29,7 +29,7 @@ public class HighlightTile : MonoBehaviour
     {
         playerMovement = GameObject.Find("Ship(Clone)");
         Vector2 parentPosition = transform.GetChild(0).transform.position;
-        var tilePosition = gameObject.GetComponentInParent<TileProperties>().tilePosition;
+        var tilePosition = gameObject.GetComponentInParent<Tile>().tilePosition;
         playerMovement.GetComponent<PlayerMovement>().MovePlayer(parentPosition, tilePosition);
     }
 }
