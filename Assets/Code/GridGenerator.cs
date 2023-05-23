@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GridGenerator : MonoBehaviour
@@ -6,7 +7,12 @@ public class GridGenerator : MonoBehaviour
     private int gridWidth = 9;
     private int gridHeight = 9;
     private float tileSpacing = 1.0f;
-
+    public struct TileDictionary
+    {
+        public (int, int) tilePosition;
+        public bool IsPathable;
+    }
+    public List<TileDictionary> tileDictionaryList;
     private void Awake()
     {
         GenerateGrid();
@@ -14,6 +20,8 @@ public class GridGenerator : MonoBehaviour
 
     private void GenerateGrid()
     {
+        tileDictionaryList = new List<TileDictionary>();
+
         for (int x = 0; x < gridWidth; x++)
         {
             for (int y = 0; y < gridHeight; y++)
@@ -30,7 +38,16 @@ public class GridGenerator : MonoBehaviour
                 tile.name = x + " , " + y;
                 tile.GetComponent<Tile>().tilePosition.Item1 = x;
                 tile.GetComponent<Tile>().tilePosition.Item2 = y;
+
+                tileDictionaryList.Add(new TileDictionary { tilePosition = (x, y), IsPathable = tile.GetComponent<Tile>().IsPathable });
             }
+        }
+        foreach (var tileDictionary in tileDictionaryList)
+        {
+            string logMessage = $"Tile Position: {tileDictionary.tilePosition}\n" +
+                                $"Is Pathable: {tileDictionary.IsPathable}";
+
+            Debug.Log(logMessage);
         }
     }
 }
