@@ -44,9 +44,7 @@ public class GridGenerator : MonoBehaviour
         }
         foreach (var tileDictionary in tileDictionaryList)
         {
-            string logMessage = $"Tile Position: {tileDictionary.tilePosition}\n" +
-                                $"Is Pathable: {tileDictionary.IsPathable}";
-
+            string logMessage = $"Tile Position: {tileDictionary.tilePosition}\n" +$"Is Pathable: {tileDictionary.IsPathable}";
             Debug.Log(logMessage);
         }
     }
